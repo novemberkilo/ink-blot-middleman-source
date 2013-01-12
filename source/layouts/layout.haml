@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+%html{ :lang => 'en' }
+
+%head
+  %meta{:charset => "utf-8"}
+  %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge,chrome=1"}
+
+  -# Pull in the page title
+  %title= @title
+
+  %meta{:name => "description", :content => ""}
+  %meta{:name => "author", :content => ""}
+  %meta{:name =>"viewport", :content => "width=device-width, initial-scale=1.0"}
+
+  -# Place favicon.ico and apple-touch-icon.png in the root directory
+
+  = stylesheet_link_tag "screen"
+
+%body
+  .container
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{ 'data-toggle' => "collapse",  "data-target" => ".nav-collapse" }
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{ "href" =>'http://novemberkilo.com'} The iNK blot
+          .nav-collapse.collapse
+            %ul.nav
+              %li{:class => ('active' if current_page.path == 'index.html') }
+                = link_to "Home", "/"
+              %li{:class => ('active' if current_page.path == 'about.html') }
+                = link_to "About", "/about.html"
+              -#%li
+                -#= link_to "Archive", "/archive.html"
+    .span8.offset2
+      - if is_blog_article?
+        %article
+          %h2= current_article.title
+          %time= current_article.date.strftime('%b %e %Y')
+          = current_article.body 
+      - else
+        = yield
+
+      %footer
+        #contacts
+          = link_to "Twitter", "http://twitter.com/novemberkilo"
+          = ' | '
+          = link_to "Github", "https://github.com/novemberkilo"
+          = ' | '
+          = link_to 'RSS', '/feed.xml'
+        #license
+          %small.pull-right
+            Licensed under 
+            = link_to "CC by 3.0", "http://creativecommons.org/licenses/by/3.0/"
+      
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
+  :javascript
+    window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.8.3.min.js"><\/script>')
+
+  = javascript_include_tag "plugins", "script"
+  = javascript_include_tag "bootstrap.js"
+  = javascript_include_tag "highlight.pack"
+  = stylesheet_link_tag "solarized_light"
+  %script hljs.initHighlightingOnLoad();
+
+  :javascript
+    var _gaq=[['_setAccount','UA-16831355-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));

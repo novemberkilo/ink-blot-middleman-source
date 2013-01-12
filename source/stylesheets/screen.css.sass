@@ -1,0 +1,54 @@
+
+// Web fonts
+@import url(http://fonts.googleapis.com/css?family=Montserrat)
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700)
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif)
+@import url(http://fonts.googleapis.com/css?family=Belgrano)
+
+/*Variables*/
+
+$primary-orange:   #fe8a16
+$hover-orange:     #f67502
+$steel-blue:       #303b41 
+$bright-blue:      #4892bc
+$dark-grey:        #4b4b48
+
+// Your own styles go here.
+  
+$bodyBackground:  #F1F1F1
+$textColor:       #393536
+$sansFontFamily:  "Droid Sans"
+$serifFontFamily: "Droid Serif"
+$baseFontFamily: $serifFontFamily
+$headingsFontFamily: $sansFontFamily
+$navbarBackground: #1F1F1F
+$navbarBackgroundHighlight: #1D1D1D
+$navbarBrandColor: $bright-blue
+$navbarLinkColor: $primary-orange
+$navbarLinkColorHover: $hover-orange
+$navbarLinkColorActive: $hover-orange
+
+
+body
+  // Without this (borrowed from one of the bootstrap samples) the bootstrap navbar
+  // clobbers the top of the content.
+  padding-top: 60px
+  padding-bottom: 40px
+
+  footer
+    padding-top: 20px
+
+#contacts
+  text-align: center
+
+.img-center
+  margin: auto
+  display: block
+  padding-bottom: 10px
+
+.embiggened
+  font-size: 120%
+
+// Twitter Bootstrap
+@import 'bootstrap'
+@import 'bootstrap-responsive'

@@ -1,0 +1,7 @@
+%section
+  %h2 Recent Articles
+  %ul.unstyled
+    - blog.articles[0...12].each do |article|
+      %li
+        = link_to article.title, article.url, class: 'embiggened'
+        %time.pull-right= article.date.strftime('%e %b %Y')
