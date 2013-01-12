@@ -4,7 +4,7 @@ date: 2011-10-07 00:00 +00:00
 tags:
 ---
 
-In my [previous post](/2011/10/Polar-curve-grapher/) I wrote about a polar curve grapher and its use of Kevin Mehall's `tdop_math.js` to parse a user input algebraic expression into a
+In my [previous post](/2011/10/02/polar-curve-grapher.html) I wrote about a polar curve grapher and its use of Kevin Mehall's `tdop_math.js` to parse a user input algebraic expression into a
 javascript eval(uable) string.  I ended up spending some time with `tdop_math.js` - you can find the source [here](https://github.com/kevinmehall/EquationExplorer/blob/master/tdop_math.js) -
 and I fell into the magical rabbit hole of Top Down Operator Precedence (TDOP) parsers. This post describes how I ended up writing a
 TDOP parser for algebraic expressions in Ruby.

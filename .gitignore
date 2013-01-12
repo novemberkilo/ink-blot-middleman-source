@@ -2,6 +2,4 @@
 .rvmrc
 .*.*
 *.swp
-_site/
-_drafts/
-server/
+build/
