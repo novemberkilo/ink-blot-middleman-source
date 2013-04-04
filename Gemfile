@@ -1,5 +1,4 @@
-source :rubygems
-
+source 'https://rubygems.org'
 
 gem "haml"
 gem "sass"
@@ -9,6 +8,7 @@ gem "redcarpet", "~> 2.0.0"
 gem "middleman"
 gem "middleman-blog"
 gem 'bootstrap-sass', '~> 2.2.2.0'
+gem 'nokogiri'
 
 # Compass plugins
 gem 'susy', "~>1.0.1" # Susy
