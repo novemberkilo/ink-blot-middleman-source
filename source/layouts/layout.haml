@@ -38,8 +38,11 @@
       - if is_blog_article?
         %article
           %h2= current_article.title
-          %time= current_article.date.strftime('%b %e %Y')
-          = current_article.body 
+          %h4= current_article.data.subtitle
+          .pull-right
+            %time= current_article.date.strftime('%b %e %Y')
+          %br
+          = current_article.body
       - else
         = yield
 
@@ -52,9 +55,9 @@
           = link_to 'RSS', '/feed.xml'
         #license
           %small.pull-right
-            Licensed under 
+            Licensed under
             = link_to "CC by 3.0", "http://creativecommons.org/licenses/by/3.0/"
-      
+
   = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
   :javascript
     window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.8.3.min.js"><\/script>')
