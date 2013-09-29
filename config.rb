@@ -78,10 +78,10 @@ end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :cache_buster
@@ -100,4 +100,6 @@ configure :build do
   # Gzip HTML, CSS, and JavaScript
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#gzip-text-files
   # activate :gzip
+  set :haml, { :ugly => true, :format => :html5 }
+  set :markdown, :fenced_code_blocks => true, :smartypants => true
 end
