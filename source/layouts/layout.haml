@@ -42,9 +42,9 @@
           .pull-right
             %time= current_article.date.strftime('%b %e %Y')
           %br
-          = current_article.body
+          ~ current_article.body
       - else
-        = yield
+        ~ yield
 
       %footer
         #contacts
