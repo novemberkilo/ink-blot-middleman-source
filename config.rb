@@ -100,6 +100,8 @@ configure :build do
   # Gzip HTML, CSS, and JavaScript
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#gzip-text-files
   # activate :gzip
-  set :haml, { :ugly => true, :format => :html5 }
-  set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+  set :haml, { :format => :html5 }
+  set :markdown_engine, :redcarpet
+  set :markdown, :fenced_code_blocks => true
 end
