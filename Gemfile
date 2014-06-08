@@ -13,5 +13,3 @@ gem 'nokogiri'
 # Compass plugins
 gem 'susy', "~>1.0.1" # Susy
 # gem 'compass-960-plugin' # 960.gs
-
-gem 'debugger'
