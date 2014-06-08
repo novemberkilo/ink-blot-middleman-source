@@ -8,7 +8,7 @@ Say you are storing JSON in Postgres and need scopes to get records
 based on their JSON attributes. This post covers the use of JSON functions
 available in Postgres v9.3 to achieve this.
 
-Say you have an Order class that contains a JSON blob that describes
+Suppose you have an Order class, containing a JSON blob that describes
 the product that the order relates to:
 
     # == Schema Information
@@ -25,7 +25,7 @@ the product that the order relates to:
 
     end
 
-Let's say `product` has the following structure:
+Suppose `product` has the following structure:
 
     { "name": "Widget 01",
       "code": "W001",
