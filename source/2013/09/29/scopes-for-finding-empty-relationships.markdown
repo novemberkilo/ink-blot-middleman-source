@@ -1,5 +1,5 @@
 ---
-title: Handy scopes for checking associations
+title: Handy scopes for associations
 tags: rails, arel
 ---
 
@@ -26,7 +26,7 @@ Or that have at least one `friend`
 
 #### Using Arel
 
-To accomplish this with Arel 
+To accomplish this with Arel
 set up the following scopes on `Friend` (thanks to [@macfanatic](http://twitter.com/macfanatic) for the tip),
 
     class Friend
@@ -45,4 +45,3 @@ The friendless:
     Person.includes(:friends).merge(Friend.to_nobody)
 
 *Note:* If you are on Rails 4 don't forget to append `references(:friends)` to these.
-
